@@ -18,30 +18,32 @@ class Card():
         return self.rank + ' of ' + self.suit
 
 
-        #CARD CLASS
+     #CARD CLASS
 
-class Card():
+#importing the random library
+import random
+
+
+class Deck():
     
-    def __init__(self,suit,rank):
-        self.suit=suit
-        self.rank=rank
-        self.value=values[rank]
+    def __init__(self):
+        self.all_cards= []
         
-    def __str__(self):
-        return self.rank + ' of ' + self.suit
-
-
-        #CARD CLASS
-
-class Card():
-    
-    def __init__(self,suit,rank):
-        self.suit=suit
-        self.rank=rank
-        self.value=values[rank]
         
-    def __str__(self):
-        return self.rank + ' of ' + self.suit
+
+	for suit in suits:
+		for rank in ranks:
+
+			#creating the chosen card 
+			chosen_card = Card(suit,rank)
+			self.all_cards.append(chosen_card)
+
+    def shuffle(self):
+    	random.shuffle(selfall_cards)
+
+    def deal_one(self):
+    	return self.all_cards.pop()
+
 
 
 
